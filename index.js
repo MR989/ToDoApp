@@ -11,7 +11,7 @@ app.set('view engine','ejs');
 //     res.render('index');
 //  });
 
-app.listen(3000,function (){
+app.listen(process.env.PORT || 3000,function (){
     console.log("app listening on port 3000")
 });
 
@@ -46,14 +46,14 @@ app.post('/remove',function(req,res){
 
         }
     }
-    res.redirect("/");
+    res.redirect('/');
 
 });
 
 app.post('/clear',function(req,res){
     task.splice(0,task.length);
     complete.splice(0,complete.length);
-    res.redirect("/")
+    res.redirect('/')
 });
 
 app.get('/',function(req,res){
