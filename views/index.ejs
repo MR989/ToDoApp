@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title> ToDo App </title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100"     rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="/style.css" rel="stylesheet">
+           
+  
+  </head>
+<body style="background-repeat: no-repeat;background-image: url(img1.jpg);background-size:cover;overflow-x: hidden;">
+  
+  
+  
+  <div class="con" >
+   My To Do App
+  </div>
+
+  
+  
+  <div class="container add" style="width: 50%;">
+    <div >
+<form action ="/add" method="POST"> 
+  <div class="wrapper2">
+    <button id="clearbutton" class="btn btn-success" formaction="/clear" type="submit"> Clear </button>
+    </div>
+       <input id="textarea" type="text" name="newtask" size="300" placeholder="Add new task">    
+       <div class="wrapper"><button class="btn btn-success" id="addbutton"> Add Task </button></div>
+       
+<h2> Added Task </h2>
+<% for( var i = 0; i < task.length; i++){ %>  
+ <li style="list-style-type: none;padding-left: 35px;">  <input type="checkbox" class="form-check-input" name="check" style="zoom:1.5;" value="<%= task[i] %>"/>
+ <%=task[i] %></li>
+<% } %>
+
+<div class="wrapper">
+<button id="removebutton" class="btn btn-success" formaction="/remove" type="submit"> Remove </button>
+</div>
+
+
+</form>
+<h2> Completed task </h2>
+<% for( var i = 0; i < complete.length; i++){ %>
+    <li  style="list-style-type: none;"><input type="checkbox" name="checki" style="zoom:1.5;" disabled checked value="<%= complete[i] %>"/> <strike> <%=complete[i] %> </strike> </li>
+<% } %>
+
+
+
+</div>
+</div>
+
+</body>
+</html>

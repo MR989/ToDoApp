@@ -1,0 +1,55 @@
+
+
+.con{
+    height: 120px;
+    background-color: rgba(2, 2, 2, 0.719);
+    margin-top: -8px;
+    margin-bottom: 4px;
+    margin-left: -8px;
+    margin-right: -8px;
+    text-align: center;
+    color: aliceblue;
+    font-size: 70px;
+    animation: mymove 5s infinite;
+    text-shadow: 2px 4px rgb(0, 0, 0);
+
+
+
+}
+
+@keyframes mymove {
+    0%{font-size: 70px;}
+    50%{font-size: 75px;}
+    100%{font-size: 70px;}
+  }
+  
+
+.add{
+    /* margin-left: 33px; */
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(87, 71, 71, 0.61);
+    font-size: 30px;
+    margin-top: -4px;
+    
+}
+.wrapper{
+    text-align: center;
+    padding-top: 5px;
+}
+.wrapper2{
+    float: right;
+    padding-bottom: 5px;
+}
+#textarea {
+    width: 100%;
+    
+    border-radius: 10px;    
+}
+#addbutton, #removebutton,#clearbutton{
+    height: 40px;
+    border-radius: 10px;
+    right: 50%;
+}
+
